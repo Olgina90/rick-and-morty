@@ -1,10 +1,17 @@
 import React from 'react'
-import { CardContent, CardImage, CardWrapper } from './styled'
+import { CardContent, CardImage, CardImageWrapper, CardWrapper } from './styled'
 import { Title } from './styled'
 import { ListItem } from './styled'
 import Image from 'next/image'
 
-export type RnMCardProps = {}
+export type RnMCardProps = {
+  name: string
+  isAlive: boolean
+  race: string
+  lastLocation: string
+  firstSeenIn: string
+  avatarSrc: string
+}
 
 /**
  * Props dentro RnMCardProps:
@@ -16,20 +23,33 @@ export type RnMCardProps = {}
  * - avatarSrc => string
  */
 
-export default function RnMCard({}: RnMCardProps) {
+export default function RnMCard({
+  name,
+  isAlive,
+  race,
+  lastLocation,
+  firstSeenIn,
+  avatarSrc,
+}: RnMCardProps) {
   return (
     <CardWrapper>
-      <CardImage
-        alt="Character's Image"
-        src="https://rickandmortyapi.com/api/character/avatar/220.jpeg"
-        width={100}
-        height={100}
-      />
+      <CardImageWrapper>
+        <Image
+          alt="Character's Image"
+          src={avatarSrc}
+          width={100}
+          height={100}
+          layout="responsive"
+        />
+      </CardImageWrapper>
+
       <CardContent>
-        <Title>Olga</Title>
+        <Title>{name}</Title>
         <ul>
-          <ListItem size="small">Eta: 33 anni</ListItem>
-          <ListItem size="large">Provenienza: Ucraina</ListItem>
+          <ListItem size="small">{isAlive ? 'Alive' : 'Dead'}</ListItem>
+          <ListItem size="small">{race}</ListItem>
+          <ListItem size="small">{lastLocation}</ListItem>
+          <ListItem size="small">{firstSeenIn}</ListItem>
         </ul>
       </CardContent>
     </CardWrapper>

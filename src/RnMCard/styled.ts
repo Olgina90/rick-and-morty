@@ -8,19 +8,28 @@ type CardWrapperProps = {}
 export const CardWrapper = styled('div')<CardWrapperProps>`
   display: flex;
   background-color: rgb(60, 62, 68);
-  padding: 8px;
   color: white;
   border-radius: 8px;
+  margin-bottom: 20px;
 `
 
-export const CardImage =styled(Image)`
-
+export const CardImageWrapper = styled('div')`
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-basis: initial;
+  flex-grow: 0;
 `
 
-export const CardContent = styled('div')``
+export const CardContent = styled('div')`
+  flex-shrink: 0;
+  flex-basis: initial;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 8px;
+`
 
 export const Title = styled('h2')`
-  font-size: 4rem;
+  font-size: 1.5rem;
 `
 
 type CardListItemProps = {
