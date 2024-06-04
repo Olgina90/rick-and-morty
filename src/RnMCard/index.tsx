@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardContent, CardImage, CardImageWrapper, CardWrapper } from './styled'
+import { CardContent, CardImageWrapper, CardWrapper } from './styled'
 import { Title } from './styled'
 import { ListItem } from './styled'
 import Image from 'next/image'

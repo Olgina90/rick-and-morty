@@ -2,7 +2,8 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 import RnMCard, { RnMCardProps } from '@/RnMCard'
-import SecondCard from '@/SecondCard'
+import Test from '@/Test'
+
 
 /**
  * - Vai su rickandmortyapi.com
@@ -65,11 +66,12 @@ const data: RnMCardProps[] = [
 
 export default function Home() {
   return (
-    <div>
-      {data.map((props) => (
-        <RnMCard key={props.name} {...props} />
-      ))}
-    </div>
+    <Test/>
+    // <div>
+    //   {data.map((props) => (
+    //     <RnMCard key={props.name} {...props} />
+    //   ))}
+    // </div>
   )
 }
 
