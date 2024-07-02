@@ -10,10 +10,12 @@ import {
 import { Title } from './styled'
 import { ListItem } from './styled'
 import Image from 'next/image'
+import { RnMCardSectionWrapper } from '@/RnMCardSection/styled'
+import RnMCardSection from '@/RnMCardSection'
 
 export type RnMCardProps = {
   name: string
-  isAlive: boolean
+  status: string
   race: string
   lastLocation: string
   firstSeenIn: string
@@ -32,13 +34,13 @@ export type RnMCardProps = {
 
 export default function RnMCard({
   name,
-  isAlive,
+  status,
   race,
   lastLocation,
   firstSeenIn,
   avatarSrc,
 }: RnMCardProps) {
-  const isAliveText = isAlive ? 'Alive' : 'Dead'
+  const isAliveText = status // Prima lettera maiuscola e le altre minuscole
   const subtitle = `${isAliveText} - ${race}`
   return (
     <CardWrapper>
@@ -54,13 +56,13 @@ export default function RnMCard({
       <CardContent>
         <TitleWrapper>
           <Title>{name}</Title>
-          <SubTitle><AliveBadge /> {subtitle}</SubTitle>
+          <SubTitle>
+            <AliveBadge /> {subtitle}
+          </SubTitle>
         </TitleWrapper>
 
-        <ul>
-          <ListItem size="small">{lastLocation}</ListItem>
-          <ListItem size="small">{firstSeenIn}</ListItem>
-        </ul>
+        <RnMCardSection label="Last known location" value={lastLocation} />
+        <RnMCardSection label="First seen in" value={firstSeenIn} />
       </CardContent>
     </CardWrapper>
   )

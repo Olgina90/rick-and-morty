@@ -15,7 +15,7 @@ import RnMCardList from '@/RnMCardList'
 const data: RnMCardProps[] = [
   {
     name: 'Blamph',
-    isAlive: true,
+    status: 'Alive',
     race: 'Alien',
     lastLocation: 'Interdimensional Cable',
     firstSeenIn: 'Interdimensional Cable 2: Tempting Fate',
@@ -23,7 +23,7 @@ const data: RnMCardProps[] = [
   },
   {
     name: 'Cowboy Rick',
-    isAlive: true,
+    status: 'Alive',
     race: 'Alien',
     lastLocation: 'Citadel of Ricks',
     firstSeenIn: 'Close Rick-counters of the Rick Kind',
@@ -31,7 +31,7 @@ const data: RnMCardProps[] = [
   },
   {
     name: 'Tank Top Jerry',
-    isAlive: true,
+    status: 'Alive',
     race: 'Alien',
     lastLocation: 'Jerryboree',
     firstSeenIn: 'Mortynight Run',
@@ -39,7 +39,7 @@ const data: RnMCardProps[] = [
   },
   {
     name: 'Josh',
-    isAlive: false,
+    status: 'Dead',
     race: 'Alien',
     lastLocation: 'Tickets Please Guy Nightmare',
     firstSeenIn: 'Never Ricking Morty',
@@ -47,7 +47,7 @@ const data: RnMCardProps[] = [
   },
   {
     name: 'Train Cops Instructor',
-    isAlive: false,
+    status: 'Dead',
     race: 'Alien',
     lastLocation: 'Story Train',
     firstSeenIn: 'Never Ricking Morty',
@@ -55,7 +55,7 @@ const data: RnMCardProps[] = [
   },
   {
     name: 'Crow Scare',
-    isAlive: true,
+    status: 'Alive',
     race: 'Alien',
     lastLocation: 'Rick and Two Crows Planet',
     firstSeenIn: 'Rickmurai Jack',
