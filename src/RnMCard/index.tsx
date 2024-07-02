@@ -1,5 +1,12 @@
 import React from 'react'
-import { CardContent, CardImageWrapper, CardWrapper } from './styled'
+import {
+  CardContent,
+  CardImageWrapper,
+  CardWrapper,
+  TitleWrapper,
+  SubTitle,
+  AliveBadge,
+} from './styled'
 import { Title } from './styled'
 import { ListItem } from './styled'
 import Image from 'next/image'
@@ -31,23 +38,26 @@ export default function RnMCard({
   firstSeenIn,
   avatarSrc,
 }: RnMCardProps) {
+  const isAliveText = isAlive ? 'Alive' : 'Dead'
+  const subtitle = `${isAliveText} - ${race}`
   return (
     <CardWrapper>
       <CardImageWrapper>
         <Image
           alt="Character's Image"
           src={avatarSrc}
-          width={100}
-          height={100}
-          layout="responsive"
+          layout="fill"
+          objectFit="cover"
         />
       </CardImageWrapper>
 
       <CardContent>
-        <Title>{name}</Title>
+        <TitleWrapper>
+          <Title>{name}</Title>
+          <SubTitle><AliveBadge /> {subtitle}</SubTitle>
+        </TitleWrapper>
+
         <ul>
-          <ListItem size="small">{isAlive ? 'Alive' : 'Dead'}</ListItem>
-          <ListItem size="small">{race}</ListItem>
           <ListItem size="small">{lastLocation}</ListItem>
           <ListItem size="small">{firstSeenIn}</ListItem>
         </ul>
