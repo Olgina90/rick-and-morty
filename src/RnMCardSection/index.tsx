@@ -4,6 +4,12 @@
 //   RnMCardSectionWrapper,
 // } from './styled'
 
+import {
+  RnMCardSectionLabel,
+  RnMCardSectionValue,
+  RnMCardSectionWrapper,
+} from './styled'
+
 // type RnMCardSectionProps = {
 //   label: string
 //   value: string
@@ -18,5 +24,16 @@
 //   )
 // }
 
+type RnMCardSectionProps = {
+  label: string
+  value: string
+}
 
-export default function RnMCardSection({}: any) {}
+export default function RnMCardSection({ label, value }: RnMCardSectionProps) {
+  return (
+    <RnMCardSectionWrapper>
+      <RnMCardSectionLabel>{label}</RnMCardSectionLabel>
+      <RnMCardSectionValue>{value}</RnMCardSectionValue>
+    </RnMCardSectionWrapper>
+  )
+}

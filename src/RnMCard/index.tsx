@@ -12,6 +12,7 @@ import { ListItem } from './styled'
 import Image from 'next/image'
 import { RnMCardSectionWrapper } from '@/RnMCardSection/styled'
 import RnMCardSection from '@/RnMCardSection'
+import capitalize from '@/Utilities/capitalize'
 
 export type RnMCardProps = {
   name: string
@@ -40,7 +41,7 @@ export default function RnMCard({
   firstSeenIn,
   avatarSrc,
 }: RnMCardProps) {
-  const isAliveText = status // Prima lettera maiuscola e le altre minuscole
+  const isAliveText = capitalize(status)
   const subtitle = `${isAliveText} - ${race}`
   return (
     <CardWrapper>
@@ -57,7 +58,7 @@ export default function RnMCard({
         <TitleWrapper>
           <Title>{name}</Title>
           <SubTitle>
-            <AliveBadge /> {subtitle}
+            <AliveBadge status={status.toLowerCase()}/> {subtitle}
           </SubTitle>
         </TitleWrapper>
 

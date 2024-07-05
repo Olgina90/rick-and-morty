@@ -56,9 +56,22 @@ export const SubTitle = styled('span')``
 
 const BADGE_SIZE = 0.5625
 
-export const AliveBadge = styled('span')`
+type AliveBadgeProps = {
+  status: string
+}
+
+export const AliveBadge = styled('span')<AliveBadgeProps>`
   display: inline-block;
-  background-color: green;
+  background-color: ${({ status }) => {
+    switch (status) {
+      case 'alive':
+        return 'green'
+      case 'dead':
+        return 'red'
+      default:
+        return 'grey'
+    }
+  }};
   width: ${BADGE_SIZE}rem;
   height: ${BADGE_SIZE}rem;
   border-radius: 100%;

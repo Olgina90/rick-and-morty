@@ -3,6 +3,7 @@ import styles from './page.module.css'
 
 import RnMCard, { RnMCardProps } from '@/RnMCard'
 import RnMCardList from '@/RnMCardList'
+import RnMHeader from '@/RnMHeader'
 
 /**
  * - Vai su rickandmortyapi.com
@@ -15,7 +16,7 @@ import RnMCardList from '@/RnMCardList'
 const data: RnMCardProps[] = [
   {
     name: 'Blamph',
-    status: 'Alive',
+    status: 'alive',
     race: 'Alien',
     lastLocation: 'Interdimensional Cable',
     firstSeenIn: 'Interdimensional Cable 2: Tempting Fate',
@@ -65,8 +66,11 @@ const data: RnMCardProps[] = [
 
 export default function Home() {
   return (
-    <main>
-      <RnMCardList data={data} />
-    </main>
+    <>
+      <RnMHeader />
+      <main>
+        <RnMCardList data={data} />
+      </main>
+    </>
   )
 }
