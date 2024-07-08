@@ -58,7 +58,7 @@ export default function RnMCard({
         <TitleWrapper>
           <Title>{name}</Title>
           <SubTitle>
-            <AliveBadge status={status.toLowerCase()}/> {subtitle}
+            <AliveBadge status={status.toLowerCase()} /> {subtitle}
           </SubTitle>
         </TitleWrapper>
 

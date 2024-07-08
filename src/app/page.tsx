@@ -5,13 +5,10 @@ import RnMCard, { RnMCardProps } from '@/RnMCard'
 import RnMCardList from '@/RnMCardList'
 import RnMHeader from '@/RnMHeader'
 
-/**
- * - Vai su rickandmortyapi.com
- * - Crea dentro home una lista
- * - Questa lista ha almeno 3 oggetti
- * - Gli oggetti hanno le prop di RnmCard
- * - Fai map della lista con le card
- */
+export const metadata = {
+  title: 'Rick and Morty Database',
+  description: 'A collection of characters, locations, and episodes from the original "Rick and Morty" Series.',
+}
 
 const data: RnMCardProps[] = [
   {

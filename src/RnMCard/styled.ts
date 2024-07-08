@@ -72,6 +72,7 @@ export const AliveBadge = styled('span')<AliveBadgeProps>`
         return 'grey'
     }
   }};
+
   width: ${BADGE_SIZE}rem;
   height: ${BADGE_SIZE}rem;
   border-radius: 100%;
