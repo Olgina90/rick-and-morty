@@ -21,7 +21,6 @@ export const HeaderHeading = styled('h1')`
 export const HeaderParagraph = styled('p')`
   margin-top: 0.5rem;
 `
-
 export const HeaderButton = styled(Link)`
   margin: 2rem 0;
 `

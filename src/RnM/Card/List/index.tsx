@@ -1,5 +1,5 @@
 import RnMCard, { RnMCardProps } from '@/RnMCard'
-import { RnMCardListWrapper,  } from './styled'
+import { RnMCardListWrapper } from './styled'
 
 type RnMCardListProps = {
   data: RnMCardProps[]
@@ -14,6 +14,3 @@ export default function RnMCardList({ data }: RnMCardListProps) {
     </RnMCardListWrapper>
   )
 }
-
-
-

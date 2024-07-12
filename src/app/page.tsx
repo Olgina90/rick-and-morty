@@ -3,7 +3,7 @@ import styles from './page.module.css'
 
 import RnMCard, { RnMCardProps } from '@/RnMCard'
 import RnMCardList from '@/RnMCardList'
-import RnMHeader from '@/RnMHeader'
+import RnMHeader from '@/RnM/Header'
 
 export const metadata = {
   title: 'Rick and Morty Database',
