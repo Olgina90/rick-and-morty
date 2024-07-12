@@ -1,4 +1,4 @@
-import RnMCard, { RnMCardProps } from '@/RnMCard'
+import RnMCard, { RnMCardProps } from '@/RnM/Card'
 import { RnMCardListWrapper } from './styled'
 
 type RnMCardListProps = {
@@ -7,8 +7,6 @@ type RnMCardListProps = {
 
 export default function RnMCardList({ data }: RnMCardListProps) {
   return (
-
-    
     <RnMCardListWrapper>
       {data.map((props) => (
         <RnMCard key={props.name} {...props} />

@@ -9,18 +9,15 @@
     "lint": "next lint",
     "prepare": "husky",
     "tscheck": "tsc --noEmit",
-    "eslint": "eslint"
+    "tscheck:all": "tsc --noEmit -p tsconfig.json",
+    "eslint": "eslint",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.11"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx,d.ts}": [
