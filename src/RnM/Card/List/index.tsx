@@ -7,6 +7,8 @@ type RnMCardListProps = {
 
 export default function RnMCardList({ data }: RnMCardListProps) {
   return (
+
+    
     <RnMCardListWrapper>
       {data.map((props) => (
         <RnMCard key={props.name} {...props} />
