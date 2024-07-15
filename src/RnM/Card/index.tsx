@@ -8,19 +8,12 @@ import {
   AliveBadge,
 } from './styled'
 import { Title } from './styled'
-import { ListItem } from './styled'
 import Image from 'next/image'
 import RnMCardSection from '@/RnM/Card/Section'
 import capitalize from '@/Utilities/capitalize'
+import { CardData } from '@/Types'
 
-export type RnMCardProps = {
-  name: string
-  status: string
-  race: string
-  lastLocation: string
-  firstSeenIn: string
-  avatarSrc: string
-}
+export type RnMCardProps = CardData
 
 /**
  * Props dentro RnMCardProps:
