@@ -10,8 +10,7 @@ import {
 import { Title } from './styled'
 import { ListItem } from './styled'
 import Image from 'next/image'
-import { RnMCardSectionWrapper } from '@/RnMCardSection/styled'
-import RnMCardSection from '@/RnMCardSection'
+import RnMCardSection from '@/RnM/Card/Section'
 import capitalize from '@/Utilities/capitalize'
 
 export type RnMCardProps = {

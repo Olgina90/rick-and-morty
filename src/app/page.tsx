@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
-import RnMCard, { RnMCardProps } from '@/RnMCard'
-import RnMCardList from '@/RnMCardList'
+import RnMCard, { RnMCardProps } from '@/RnM/Card'
+import RnMCardList from '@/RnM/Card/List'
 import RnMHeader from '@/RnM/Header'
 
 export const metadata = {
   title: 'Rick and Morty Database',
-  description: 'A collection of characters, locations, and episodes from the original "Rick and Morty" Series.',
+  description:
+    'A collection of characters, locations, and episodes from the original "Rick and Morty" Series.',
 }
 
 const data: RnMCardProps[] = [
