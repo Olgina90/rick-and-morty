@@ -1,54 +1,29 @@
-const tempData = [
-    {
-      name: 'Blamph',
-      status: 'alive',
-      race: 'Alien',
-      lastLocation: 'Interdimensional Cable',
-      firstSeenIn: 'Interdimensional Cable 2: Tempting Fate',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/49.jpeg',
-    },
-    {
-      name: 'Cowboy Rick',
-      status: 'Alive',
-      race: 'Alien',
-      lastLocation: 'Citadel of Ricks',
-      firstSeenIn: 'Close Rick-counters of the Rick Kind',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/78.jpeg',
-    },
-    {
-      name: 'Tank Top Jerry',
-      status: 'Alive',
-      race: 'Alien',
-      lastLocation: 'Jerryboree',
-      firstSeenIn: 'Mortynight Run',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/443.jpeg',
-    },
-    {
-      name: 'Josh',
-      status: 'Dead',
-      race: 'Alien',
-      lastLocation: 'Tickets Please Guy Nightmare',
-      firstSeenIn: 'Never Ricking Morty',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/609.jpeg',
-    },
-    {
-      name: 'Train Cops Instructor',
-      status: 'Dead',
-      race: 'Alien',
-      lastLocation: 'Story Train',
-      firstSeenIn: 'Never Ricking Morty',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/634.jpeg',
-    },
-    {
-      name: 'Crow Scare',
-      status: 'Alive',
-      race: 'Alien',
-      lastLocation: 'Rick and Two Crows Planet',
-      firstSeenIn: 'Rickmurai Jack',
-      avatarSrc: 'https://rickandmortyapi.com/api/character/avatar/808.jpeg',
-    },
-  ]
+import { RnMCardProps } from '@/RnM/Card'
+import { CharacterData, CharactersResponse } from '@/Types/data'
+
+function getCardProps({
+  name,
+  status,
+  species,
+  location,
+  origin,
+  image,
+}: CharacterData): RnMCardProps {
+  return {
+    name,
+    status,
+    race: species,
+    lastLocation: location.name,
+    firstSeenIn: origin.name,
+    avatarSrc: image,
+  }
+}
 
 export async function GET() {
-    return Response.json({ data: tempData })
+  // const response = await fetch('https://rickandmortyapi.com/api/character')
+  // const { info, results }: CharactersResponse = await response.json()
+  // const data = results.map(getCardProps)
+  // return Response.json({ data })
+
+  return Response.json({ data: [] })
 }
