@@ -12,14 +12,14 @@ export const metadata = {
 }
 
 export default async function Home() {
-  // const response = await fetch('http:localhost:3000/api/cards-data')
-  // const { data } = await response.json()
+  const response = await fetch('http:localhost:3000/api/cards-data?limit=12')
+  const { cardsData } = await response.json()
 
   return (
     <>
       <RnMHeader />
       <main>
-        <RnMCardList data={[]} />
+        <RnMCardList data={cardsData} />
       </main>
     </>
   )

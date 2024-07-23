@@ -29,3 +29,4 @@ export type CharactersResponse = {
   info: InfoData
   results: CharacterData[]
 }
+

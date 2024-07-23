@@ -19,11 +19,14 @@ function getCardProps({
   }
 }
 
-export async function GET() {
-  // const response = await fetch('https://rickandmortyapi.com/api/character')
-  // const { info, results }: CharactersResponse = await response.json()
-  // const data = results.map(getCardProps)
-  // return Response.json({ data })
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const limit = Number(searchParams.get('limit')) || null
 
-  return Response.json({ data: [] })
+  const response = await fetch(`https://rickandmortyapi.com/api/character`)
+  const { results }: CharactersResponse = await response.json()
+
+  const limitedResults = limit ? results.slice(0, limit) : results
+  const cardsData = limitedResults.map(getCardProps)
+  return Response.json({ cardsData })
 }
