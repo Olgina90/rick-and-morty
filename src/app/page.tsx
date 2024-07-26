@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { headers } from 'next/headers'
 
 import RnMCard, { RnMCardProps } from '@/RnM/Card'
 import RnMCardList from '@/RnM/Card/List'
@@ -12,7 +13,11 @@ export const metadata = {
 }
 
 export default async function Home() {
-  const response = await fetch('http:localhost:3000/api/cards-data?limit=12')
+  const headersList = headers();
+  const hostname = headersList.get('x-forwarded-host');
+
+
+  const response = await fetch(`http://${hostname}/api/cards-data?limit=6`)
   const { cardsData } = await response.json()
 
   return (
