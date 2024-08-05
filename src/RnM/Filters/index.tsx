@@ -42,11 +42,6 @@ function Filter() {
     const url = new URL(pathname, origin)
     const entries = Array.from(searchParams.entries())
     for (const [key, value] of entries) {
-      // if (key === 'race') {
-      //   url.searchParams.append(key, raceValue)
-      // } else {
-      //   url.searchParams.append(key, value)
-      // }
       const newValue = key === 'race' ? raceValue : value
       url.searchParams.append(key, newValue)
     }

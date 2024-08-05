@@ -23,6 +23,8 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const limit = Number(searchParams.get('limit')) || null
 
+  console.log({ race: searchParams.get('race') })
+
   const response = await fetch(`https://rickandmortyapi.com/api/character`)
   const { results }: CharactersResponse = await response.json()
 

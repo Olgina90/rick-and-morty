@@ -13,11 +13,30 @@ export const metadata = {
     'A collection of characters, locations, and episodes from the original "Rick and Morty" Series.',
 }
 
-export default async function Browse() {
+type BrowseSearchParams = {
+  race?: string
+}
+
+type BrowseProps = {
+  searchParams: BrowseSearchParams
+}
+
+const cardsDataKeys: string[] = ['race']
+
+export default async function Browse({ searchParams }: BrowseProps) {
   const headersList = headers()
   const hostname = headersList.get('x-forwarded-host')
 
-  const response = await fetch(`http://${hostname}/api/cards-data`)
+  const cardsDataSearchParams = Object.entries(searchParams)
+    .filter(
+      ([key, value]) => value !== undefined && cardsDataKeys.includes(key)
+    )
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&')
+
+  const response = await fetch(
+    `http://${hostname}/api/cards-data?${cardsDataSearchParams}`
+  )
   const { cardsData } = await response.json()
   return (
     <>
