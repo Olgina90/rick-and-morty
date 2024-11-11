@@ -2,7 +2,7 @@
 
 import focusBorderStyles from '@/Styles/focusBorderStyles'
 import Link from 'next/link'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const HeaderMain = styled('header')`
   padding-top: 10vh;

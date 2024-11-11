@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import styled, { css } from 'styled-components'
+import styled from '@emotion/styled'
 
 type CardWrapperProps = {}
 

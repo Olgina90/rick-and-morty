@@ -1,7 +1,7 @@
 'use client'
-import { createGlobalStyle } from 'styled-components'
+import { css, Global } from '@emotion/react'
+import { FC } from 'react'
 
-const GlobalStyles = createGlobalStyle`
-    
-`
+const GlobalStyles: FC = () => <Global styles={css``} />
+
 export default GlobalStyles

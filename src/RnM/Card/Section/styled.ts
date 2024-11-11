@@ -1,6 +1,6 @@
 'use client'
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const RnMCardSectionWrapper = styled('div')`
   margin: 16px 0px;

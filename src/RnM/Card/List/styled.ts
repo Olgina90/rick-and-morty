@@ -1,6 +1,6 @@
 'use client'
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const RnMCardListWrapper = styled('div')`
   display: grid;
@@ -10,4 +10,3 @@ export const RnMCardListWrapper = styled('div')`
   column-gap: 16px;
   row-gap: 16px;
 `
-
