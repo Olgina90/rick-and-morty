@@ -14,3 +14,5 @@ export default function RnMCardList({ data }: RnMCardListProps) {
     </RnMCardListWrapper>
   )
 }
+
+
