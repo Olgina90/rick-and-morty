@@ -15,16 +15,6 @@ import { CardData } from '@/Types'
 
 export type RnMCardProps = CardData
 
-/**
- * Props dentro RnMCardProps:
- * - name => string
- * - isAlive => boolean
- * - race => string
- * - lastLocation => string
- * - firstSeenIn => string
- * - avatarSrc => string
- */
-
 export default function RnMCard({
   name,
   status,
