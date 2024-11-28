@@ -35,6 +35,7 @@ export const Default: Story = {
 export const StatusAlive: Story = {
   args: {
     status: 'Alive',
+    race: 'Alien'
   },
 }
 
