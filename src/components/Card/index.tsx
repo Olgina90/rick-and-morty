@@ -1,5 +1,7 @@
-import { CardWrapper } from "./styled";
+import { CardWrapper, CardWrapperProps } from "./styled";
 
-export default function Card(){
-    return <CardWrapper>Olga</CardWrapper>
+type CardProps = CardWrapperProps
+
+export default function Card({...cardWrapperProps}: CardProps){
+    return <CardWrapper {...cardWrapperProps}>Olga</CardWrapper>
 }

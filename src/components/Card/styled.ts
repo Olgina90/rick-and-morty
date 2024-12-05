@@ -1,9 +1,16 @@
 import styled from '@emotion/styled'
 
-export const CardWrapper = styled.div`
+export type CardWrapperProps = {
+  offsetX: number
+  offsetY: number
+  blur: number
+  color: string
+}
+
+export const CardWrapper = styled.div<CardWrapperProps>`
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-    padding: 8px;
+  box-shadow: ${({ offsetX, offsetY, blur, color }) =>
+    `${offsetX}px ${offsetY}px ${blur}px ${color}`};
+  padding: 8px;
 `
