@@ -1,7 +1,8 @@
-import { CardWrapper, CardWrapperProps } from "./styled";
+import { PropsWithChildren } from "react";
+import { CardWrapper } from "./styled";
 
-type CardProps = CardWrapperProps
+type CardProps = PropsWithChildren<{}>
 
-export default function Card({...cardWrapperProps}: CardProps){
-    return <CardWrapper {...cardWrapperProps}>Olga</CardWrapper>
+export default function Card({children}: CardProps){
+    return <CardWrapper>{children}</CardWrapper>
 }
