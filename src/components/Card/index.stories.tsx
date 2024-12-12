@@ -1,5 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react/*'
 import Card from '.'
+import Image from '../Image'
+import Text from '../Text'
+import Chip from '../Chip'
+import Box from '../Box'
 
 const meta: Meta<typeof Card> = {
   title: 'components/Card',
@@ -17,4 +21,17 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {}
-//mettere la story userCard e come argumento il children che voglio
+
+//Homework. mettere la story userCard e come argumento il children che voglio(imagine, testo, chip)
+
+export const UserCard: Story = {
+  args: {
+    children: (
+      <Box>
+        <Image/>
+        <Text></Text>
+        <Chip label="chip label"/>
+      </Box>
+    ),
+  },
+}
